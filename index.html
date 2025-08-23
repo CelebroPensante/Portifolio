@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <!-- link to google font for inserting font families-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    
+    <!-- link to font awesome to inserting icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- link to css file for styles-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+     <nav class = "navbar">
+        <a href="#" class ="logo">PORT<span>FOLIO</span></a>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+     </nav>
+
+     <!-- Hero Section -->
+      <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi I'm Vitor</h1>
+                    <h2>AI & Innovation</h2>
+                    <p>Technology enthusiast passionate about Artificial Intelligence, software innovation, and digital transformation. I combine technical expertise with a problem-solving mindset to create solutions that truly impact organizations and people.</p>
+                    <div class="btn-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fa-solid fa-rocket"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn">
+                            <i class="fa-solid fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-wrapper">
+                        <img src="assets\Profile.jpeg" alt="Profile" class="profile-img">
+                        <div class="glow-effect">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Get to know more about my journey and skills</p>
+            </div>
+            <div class="about-content">
+                <div class="about-main">
+                    <div class="about-left">
+                        <div class="about-image">
+                            <img src="assets\AboutMe.jpeg" alt="Vitor G. J. de Carvalho" class="about-img">
+                        </div>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-robot"></i>
+                                </div>
+                                <div class="detail-info">
+                                    <h4>AI & Machine Learning</h4>
+                                    <p>Developing AI solutions with TensorFlow and PyTorch.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-cogs"></i>
+                                </div>
+                                <div class="detail-info">
+                                    <h4>Automation & Power Platform</h4>
+                                    <p>Creating low-code solutions for corporate processes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div class="detail-info">
+                                    <h4>Data Science & Analytics</h4>
+                                    <p>Building insights through Power BI and analytics.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-right">
+                        <div class="about-intro">
+                            <h3>Hello, I'm Vitor G. J. de Carvalho!</h3>
+                            <p>I’m Vitor G. J. de Carvalho, a technology enthusiast passionate about Artificial Intelligence, software innovation, and digital transformation. My journey so far has been shaped by hands-on experience in both corporate IT leadership and innovation-driven environments, where I combine technical expertise with a problem-solving mindset.</p>
+                            <p>Currently, I work as an IT Leadership Intern at CNH Industrial, where I contribute to strategic initiatives that support global technology operations. Alongside this role, I am part of the Innovation Lab, a team of interns dedicated to experimenting with emerging technologies and building impactful solutions. Within the lab, I serve as Tech Lead for Power Platform, guiding development efforts and helping the team deliver value through low-code automation and applications.</p>
+                            <p>At CNH’s Software Factory (IT Corporate Functions), I serve as the Technical Responsible for AI, where my activities include vendor evaluation, project monitoring, and providing technical support. This role allows me to connect AI initiatives with innovation goals while ensuring solutions meet business needs.</p>
+                        </div>
+                        
+                        <div class="about-skills">
+                            <h3>Skills & Technologies</h3>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h4>Programming & Development</h4>
+                                    <div class="skill-items">
+                                        <span class="skill-item">Python</span>
+                                        <span class="skill-item">Java</span>
+                                        <span class="skill-item">JavaScript</span>
+                                        <span class="skill-item">Kotlin</span>
+                                        <span class="skill-item">C</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h4>Data Science & AI</h4>
+                                    <div class="skill-items">
+                                        <span class="skill-item">TensorFlow</span>
+                                        <span class="skill-item">PyTorch</span>
+                                        <span class="skill-item">Keras</span>
+                                        <span class="skill-item">Scikit-learn</span>
+                                        <span class="skill-item">NumPy</span>
+                                        <span class="skill-item">Pandas</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h4>Web & Databases</h4>
+                                    <div class="skill-items">
+                                        <span class="skill-item">HTML5</span>
+                                        <span class="skill-item">CSS3</span>
+                                        <span class="skill-item">MySQL</span>
+                                        <span class="skill-item">PostgreSQL</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="skill-category">
+                                    <h4>Automation & Tools</h4>
+                                    <div class="skill-items">
+                                        <span class="skill-item">Power Platform</span>
+                                        <span class="skill-item">Power BI</span>
+                                        <span class="skill-item">Power Automate</span>
+                                        <span class="skill-item">GitHub</span>
+                                        <span class="skill-item">Arduino</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <h2><i class="fa-solid fa-code"></i> My Projects</h2>
+                <p>Explore my latest work in AI, automation, and innovation technology</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">Artificial Intelligence</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="iot">IoT & Analytics</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Projects will be rendered dynamically by script.js -->
+            </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Let's work together to create something amazing</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>vitor.gustavo.jc@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+55 (41) 98778-2509</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Curitiba, Brazil</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4><i class="fa-solid fa-share-nodes"></i> Connect With Me</h4>
+                        <div class="social-icons">
+                            <a href="https://github.com/CelebroPensante" class="social-icon" title="GitHub - View my code">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vitor-jaskieviz-carvalho" class="social-icon" title="LinkedIn - Professional network">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/vitokievz" class="social-icon" title="Instagram - Follow my journey">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px; color: var(--text-dim); font-size: 0.9rem; font-style: italic;">
+                            Feel free to reach out through any platform - I'm always open to new opportunities and collaborations!
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3><i class="fa-solid fa-envelope"></i> Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="from_name" placeholder="Your full name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="from_email" placeholder="your.email@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project, ideas, or just say hello..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <div class="modal-title-section">
+                    <h2 id="modal-title">Project Title</h2>
+                    <p class="modal-subtitle" id="modal-subtitle">Professional project showcase</p>
+                    <div class="modal-tags" id="modal-tags">
+                        <span class="modal-tag">Technology</span>
+                        <span class="modal-tag">Innovation</span>
+                    </div>
+                </div>
+                <div class="modal-links">
+                    <a href="#" id="modal-live-link" class="modal-btn" target="_blank">
+                        <i class="fa-solid fa-external-link"></i> Live Demo
+                    </a>
+                    <a href="#" id="modal-github-link" class="modal-btn" target="_blank">
+                        <i class="fa-brands fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-left">
+                    <div class="modal-image-container">
+                        <img id="modal-image" src="" alt="Project Screenshot">
+                    </div>
+                    
+                    <div class="modal-section">
+                        <h3><i class="fa-solid fa-images"></i> Project Gallery</h3>
+                        <div class="modal-gallery" id="modal-gallery">
+                            <img src="https://via.placeholder.com/300x180/0a0a0a/ff073c?text=Screenshot+1" alt="Screenshot 1">
+                            <img src="https://via.placeholder.com/300x180/0a0a0a/ff073c?text=Screenshot+2" alt="Screenshot 2">
+                            <img src="https://via.placeholder.com/300x180/0a0a0a/ff073c?text=Screenshot+3" alt="Screenshot 3">
+                            <img src="https://via.placeholder.com/300x180/0a0a0a/ff073c?text=Screenshot+4" alt="Screenshot 4">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-right">
+                    <div class="modal-details">
+                        <div class="modal-section">
+                            <h3><i class="fa-solid fa-info-circle"></i> About This Project</h3>
+                            <p id="modal-description">Project description will appear here with detailed information about the goals, challenges, and solutions implemented in this project.</p>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fa-solid fa-star"></i> Key Features</h3>
+                            <ul id="modal-features">
+                                <li>Advanced feature implementation</li>
+                                <li>Scalable architecture design</li>
+                                <li>Modern technology integration</li>
+                                <li>Performance optimization</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fa-solid fa-code"></i> Technologies Used</h3>
+                            <div id="modal-tech" class="modal-tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React</span>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-section">
+                            <h3><i class="fa-solid fa-chart-bar"></i> Project Statistics</h3>
+                            <div class="modal-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number" id="stat-duration">6</span>
+                                    <span class="stat-label">Months</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" id="stat-commits">150+</span>
+                                    <span class="stat-label">Commits</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number" id="stat-tech">8</span>
+                                    <span class="stat-label">Technologies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Debug button (only visible in development) -->
+    <div id="debugPanel" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: none;">
+        <button id="reloadProjectsBtn" style="background: var(--neon-red); color: #000; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+            🔄 Reload Projects
+        </button>
+    </div>
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+    
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="script.js"></script>
+
+    <!-- Debug script -->
+    <script>
+        // Show debug panel if in development (localhost or file://)
+        if (window.location.hostname === 'localhost' || window.location.protocol === 'file:') {
+            document.getElementById('debugPanel').style.display = 'block';
+            document.getElementById('reloadProjectsBtn').addEventListener('click', function() {
+                console.log('Reloading projects from JSON...');
+                if (window.reloadProjects) {
+                    window.reloadProjects();
+                    this.textContent = '✅ Reloaded!';
+                    setTimeout(() => {
+                        this.textContent = '🔄 Reload Projects';
+                    }, 2000);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

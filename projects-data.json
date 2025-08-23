@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+        "id": "libras-interpreter",
+        "title": "AI Libras (Brazilian Sign Language) Alphabet Interpreter",
+        "subtitle": "Hand gesture recognition powered by AI",
+        "description": "This project is an AI-based system capable of interpreting the Brazilian Sign Language (Libras) alphabet using computer vision and machine learning. By leveraging MediaPipe for hand landmark detection and a Random Forest classifier trained on custom datasets, the application recognizes alphabetic signs in real-time through a webcam. The system was designed to support accessibility, offering a foundation that can later be expanded to cover words and complete sentences in Libras.",
+        "category": "ai",
+        "status": "completed",
+        "date": "2025",
+        "progress": 100,
+        "image": "assets/projects/librasAI/ProjectPhoto-V.png",
+        "technologies": ["Python", "OpenCV", "MediaPipe", "scikit-learn"],
+        "githubLink": "https://github.com/CelebroPensante/detector-de-alfabeto-em-libras",
+        "features": [
+            "Real-time recognition of Libras alphabet signs via webcam",
+            "Hand landmark detection with Google MediaPipe",
+            "Machine learning classification with Random Forest",
+            "Visualization of detected landmarks and predicted characters on screen"
+        ],
+        "challenges": "One of the main challenges was building a robust dataset for training the model and ensuring high accuracy across different lighting conditions, camera qualities, and hand positions. Another challenge was optimizing the real-time detection pipeline while maintaining low latency.",
+        "outcomes": "The system successfully achieves accurate recognition of the Libras alphabet, providing a strong foundation for future improvements. It demonstrates how AI and computer vision can be applied to accessibility, paving the way for a more complete Libras interpreter capable of recognizing words and phrases.",
+        "stats": {
+          "duration": "3",
+          "commits": "5",
+          "tech": "5"
+        },
+        "gallery": [
+          "assets/projects/librasAI/ProjectPhoto-V.png",
+          "assets/projects/librasAI/ProjectPhoto-I.png",
+          "assets/projects/librasAI/ProjectPhoto-T.png",
+          "assets/projects/librasAI/ProjectPhoto-O.png",
+          "assets/projects/librasAI/ProjectPhoto-R.png"
+        ]
+    }
+  ]
+}
