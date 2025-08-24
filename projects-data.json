@@ -32,6 +32,36 @@
           "assets/projects/librasAI/ProjectPhoto-O.png",
           "assets/projects/librasAI/ProjectPhoto-R.png"
         ]
+    },
+    {
+      "id": "SmartCook",
+      "title": "SmartCook – AI Recipe Recommendation System",
+      "subtitle": "Personalized recipe suggestions powered by AI",
+      "description": "SmartCook is an intelligent system that recommends recipes based on user preferences, dietary restrictions, and available ingredients. It leverages natural language processing and machine learning techniques to understand user inputs (text or ingredient selection) and provide relevant recipe suggestions efficiently.",
+      "category": "ai",
+      "status": "in-progress",
+      "date": "2025",
+      "progress": 60,
+      "image": "assets\\projects\\SmartCook\\HomePage.png",
+      "technologies": ["Python", "Flask (or FastAPI)", "Pandas", "scikit-learn", "JavaScript/HTML/CSS"],
+      "githubLink": "https://github.com/CelebroPensante/SmartCook",
+      "features": [
+        "Accepts input of ingredients or user preferences via API/web interface",
+        "NLP processing to interpret user queries and map them to recipe data",
+        "Recommendation model using similarity search or classification",
+        "Backend server exposing REST endpoints for frontend or third-party integrations"
+      ],
+      "challenges": "One of the main challenges was defining an effective recommendation model without a fully labeled dataset, structuring recipe data, and ensuring that the API could efficiently handle user queries. Another challenge was integrating the backend with a user-friendly frontend.",
+      "outcomes": "The system implements a functional backend capable of receiving inputs and returning recipe suggestions. It provides a strong foundation for future improvements, such as building a complete frontend interface, enhancing model accuracy, and adding support for advanced dietary filters.",
+      "stats": {
+        "duration": "2",
+        "commits": "24",
+        "tech": "5"
+      },
+      "gallery": [
+        "assets\\projects\\SmartCook\\HomePage.png",
+        "assets\\projects\\SmartCook\\Sugestion.png"
+      ]
     }
   ]
 }
