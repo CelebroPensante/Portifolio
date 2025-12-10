@@ -548,15 +548,38 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('modal-subtitle').textContent = project.subtitle || '';
                     document.getElementById('modal-description').textContent = project.description;
                     document.getElementById('modal-image').src = project.image;
-                    document.getElementById('modal-github-link').href = project.githubLink || '#';
+                    
+                    // Handle GitHub link with proper validation and debugging
+                    const githubLink = document.getElementById('modal-github-link');
+                    console.log('GitHub Link:', project.githubLink);
+                    console.log('GitHub Link exists:', !!project.githubLink);
+                    
+                    if (project.githubLink && project.githubLink.trim() !== '' && project.githubLink !== '#') {
+                        githubLink.href = project.githubLink;
+                        githubLink.style.display = 'inline-flex';
+                        githubLink.style.visibility = 'visible';
+                        githubLink.target = '_blank';
+                        githubLink.rel = 'noopener noreferrer';
+                        githubLink.removeAttribute('disabled');
+                        console.log('GitHub link set to:', project.githubLink);
+                    } else {
+                        githubLink.style.display = 'none';
+                        githubLink.style.visibility = 'hidden';
+                        console.log('GitHub link not available');
+                    }
                     
                     // Handle Live Demo button visibility
                     const liveLinkBtn = document.getElementById('modal-live-link');
                     if (project.liveLink && project.liveLink.trim() !== '') {
                         liveLinkBtn.href = project.liveLink;
                         liveLinkBtn.style.display = 'inline-flex';
+                        liveLinkBtn.style.visibility = 'visible';
+                        liveLinkBtn.target = '_blank';
+                        liveLinkBtn.rel = 'noopener noreferrer';
+                        liveLinkBtn.removeAttribute('disabled');
                     } else {
                         liveLinkBtn.style.display = 'none';
+                        liveLinkBtn.style.visibility = 'hidden';
                     }
                     
                     // Populate tags
@@ -669,15 +692,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('modal-subtitle').textContent = project.subtitle;
                 document.getElementById('modal-description').textContent = project.description;
                 document.getElementById('modal-image').src = project.image;
-                document.getElementById('modal-github-link').href = project.githubLink;
+                
+                // Handle GitHub link with proper validation
+                const githubLink = document.getElementById('modal-github-link');
+                console.log('GitHub Link:', project.githubLink);
+                
+                if (project.githubLink && project.githubLink.trim() !== '' && project.githubLink !== '#') {
+                    githubLink.href = project.githubLink;
+                    githubLink.style.display = 'inline-flex';
+                    githubLink.style.visibility = 'visible';
+                    githubLink.target = '_blank';
+                    githubLink.rel = 'noopener noreferrer';
+                    githubLink.removeAttribute('disabled');
+                    console.log('GitHub link set to:', project.githubLink);
+                } else {
+                    githubLink.style.display = 'none';
+                    githubLink.style.visibility = 'hidden';
+                    console.log('GitHub link not available');
+                }
                 
                 // Handle Live Demo button visibility
                 const liveLinkBtn = document.getElementById('modal-live-link');
                 if (project.liveLink && project.liveLink.trim() !== '') {
                     liveLinkBtn.href = project.liveLink;
                     liveLinkBtn.style.display = 'inline-flex';
+                    liveLinkBtn.style.visibility = 'visible';
+                    liveLinkBtn.target = '_blank';
+                    liveLinkBtn.rel = 'noopener noreferrer';
+                    liveLinkBtn.removeAttribute('disabled');
                 } else {
                     liveLinkBtn.style.display = 'none';
+                    liveLinkBtn.style.visibility = 'hidden';
                 }
                 
                 // Populate tags
@@ -728,10 +773,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close modal when X is clicked
     if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
+        closeBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             modal.classList.remove('show');
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
+        });
+        
+        // Add touch feedback for mobile
+        closeBtn.addEventListener('touchstart', function() {
+            this.style.transform = 'scale(0.95)';
+        });
+        
+        closeBtn.addEventListener('touchend', function() {
+            this.style.transform = '';
         });
     }
 
@@ -746,12 +801,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close modal with Escape key
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && modal.classList.contains('show')) {
+        if (event.key === 'Escape' && modal && modal.style.display === 'block') {
             modal.classList.remove('show');
             modal.style.display = 'none';
             document.body.style.overflow = 'auto';
         }
     });
+    
+    // Ensure modal buttons work correctly
+    const githubBtn = document.getElementById('modal-github-link');
+    const liveBtn = document.getElementById('modal-live-link');
+    
+    if (githubBtn) {
+        githubBtn.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            console.log('GitHub button clicked, navigating to:', href);
+            if (href && href !== '#') {
+                window.open(href, '_blank');
+                return false;
+            }
+        });
+    }
+    
+    if (liveBtn) {
+        liveBtn.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            console.log('Live Demo button clicked, navigating to:', href);
+            if (href && href !== '#') {
+                window.open(href, '_blank');
+                return false;
+            }
+        });
+    }
 
     // Gallery image lightbox functionality
     const galleryImages = document.querySelectorAll('.modal-gallery img');
