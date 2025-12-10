@@ -1,3 +1,33 @@
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = navLinks.contains(event.target);
+        const isClickInsideHamburger = hamburger.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickInsideHamburger && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+}
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
